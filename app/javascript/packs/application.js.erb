@@ -1,0 +1,44 @@
+// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
+// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
+// of the page.
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
+
+import '../src/application.scss';
+
+const Home = props => (
+  <div className="top-bar">
+    <div className="top-bar-left">
+      <ul className="menu">
+        <li><img src="<%= asset_pack_path 'images/super.png' %>" /></li>
+
+
+ 
+
+
+
+        <li className="menu-text"> Hello {props.name}, whatssss up!</li>
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+      </ul>
+    </div>
+  </div>
+)
+
+Home.defaultProps = {
+  name: 'David'
+}
+
+Home.propTypes = {
+  name: PropTypes.string
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(
+    <Home name="React" />,
+    document.body.appendChild(document.createElement('div')),
+  )
+})
