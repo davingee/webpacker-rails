@@ -17,7 +17,7 @@ default: &default
     - .coffee
     - .erb
     - .js
-    - .jsx
+    - .jsx.erb
     - .ts
     - .vue
     - .sass
