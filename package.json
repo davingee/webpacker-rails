@@ -11,6 +11,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "rails-erb-loader": "^5.2.1",
     "webpack-dev-server": "^2.9.7"
   }
 }
