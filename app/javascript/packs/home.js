@@ -1,18 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import '../src/application.scss';
-// import PropTypes from 'prop-types'
-
-
-// <%# include Rails.application.routes.url_helpers %>
-// const root_url = <%# root_url(only_path: true) %>
-// https://github.com/rails/webpacker/issues/1081
-
+import PropTypes from 'prop-types'
 export class Home extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render(){
     return (
       <div className="top-bar">
@@ -29,5 +22,3 @@ export class Home extends React.Component {
     );
   }
 }
-
-

@@ -1,6 +1,20 @@
 const { environment } = require('@rails/webpacker')
+// const merge = require('webpack-merge')
+//
+// const myCssLoaderOptions = {
+//   modules: true,
+//   sourceMap: true,
+//   localIdentName: '[name]__[local]___[hash:base64:5]'
+// }
+//
+// const CSSLoader = environment.loaders.get('sass').use.find(el => el.loader === 'css-loader')
+//
+// CSSLoader.options = merge(CSSLoader.options, myCssLoaderOptions)
+//
+// module.exports = environment
+
 // console.log(environment.loaders)
-// const erb = environment.loaders.get('erb')
+const erb = environment.loaders.get('erb')
 // const newErb = {
 //   test: /\.erb$/,
 //   enforce: 'pre',
@@ -11,11 +25,11 @@ const { environment } = require('@rails/webpacker')
 //   // use: [ { loader: 'rails-erb-loader', options: [Object] } ]
 // }
 //
-// // // console.log(environment.loaders)
-// // // Re-insert back again but before babel loader
-// //
 // console.log(environment.loaders)
-// environment.loaders.insert('erb', erb, { before: 'babel' })
+// Re-insert back again but before babel loader
+
+// console.log(environment.loaders)
+environment.loaders.insert('erb', erb, { before: 'babel' })
 // const bable = environment.loaders.get('babel')
 // bable.query =  { presets: ['es2015']}
 //
